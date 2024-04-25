@@ -12,7 +12,7 @@ class Dosen extends Model
     protected $table = 'dosen';
 
     protected $primaryKey = 'id_dosen';
-    public $timeStamps = false;
+    public $timestamps = false;
     public function ktd()
     {
         return $this->hasOne(Ktd::class, 'id_dosen');

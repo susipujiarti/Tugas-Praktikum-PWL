@@ -3,7 +3,7 @@
 @section('container')
     <h1 class="text-center">Data Dosen</h1>
     <div class="mb-4">
-    <button type="button" class="btn btn-success ">Tambah Data</button>
+    <a href="dosen/create"><button type="button" class="btn btn-success ">Tambah Data</button>
     </div>
     <div class="row">
         <table class="table">
@@ -26,7 +26,7 @@
                 <td>{{$dsn->nip}}</td>
                 <td>{{$dsn->nidn}}</td>
                 <td>{{$dsn->email}}</td>
-                <td>{{$dsn->ktd->nomor_identitas}}</td>
+                <td>{{$dsn->ktd?->nomor_identitas}}</td>
                 <td>
                     <button type="button" class="btn btn-primary">Update</button>
                     <button type="button" class="btn btn-danger">Hapus</button>

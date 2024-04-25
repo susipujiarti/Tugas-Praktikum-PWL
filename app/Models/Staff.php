@@ -5,15 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ktm extends Model
+class Staff extends Model
 {
     use HasFactory;
 
-    protected $table = 'ktm';
+    protected $table = 'staff';
 
-    protected $primaryKey = 'id_ktm';
+    protected $primaryKey = 'id';
+
+    protected $fileable = ['id', 'nip', 'email', 'nama', 'tanggal_lahir', 'no_hp'];
+
     public $timestamps = false;
-    public function mahasiswa(){
-        return $this->belongsTo(Mahasiswa::class);
-    }
+    
 }
+
