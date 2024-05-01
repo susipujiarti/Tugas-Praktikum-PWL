@@ -13,7 +13,7 @@ class Staff extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fileable = ['id', 'nip', 'email', 'nama', 'tanggal_lahir', 'no_hp'];
+    protected $fillable = ['id', 'nip', 'email', 'nama', 'tanggal_lahir', 'no_hp'];
 
     public $timestamps = false;
     

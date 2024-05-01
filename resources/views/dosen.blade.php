@@ -29,7 +29,7 @@
                 <td>{{$dsn->ktd?->nomor_identitas}}</td>
                 <td>
                     <button type="button" class="btn btn-primary">Update</button>
-                    <button type="button" class="btn btn-danger">Hapus</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
                 </td>
               </tr>
               @endforeach

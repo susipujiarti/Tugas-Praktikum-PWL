@@ -10,31 +10,37 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="mt-4">Form Update Data Mahasiswa</h2>
-        <form action="{{route('update', $mahasiswa->id_mahasiswa)}}" method="POST">
+        <h2 class="mt-4">Hapus Data Mahasiswa: </h2>
+        <form action="{{ route('destroy', $mahasiswa->id_mahasiswa)}}" method="delete">
             @csrf
-            @method('PUT')
+            @method('DELETE') <!-- Tambahkan ini untuk menentukan metode DELETE -->
+
             <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" class="form-control" id="nama" name="nama" value="{{$mahasiswa->nama}}" required>
+                <input name="nama" type="text" class="form-control" id="nama"  value="{{$mahasiswa->nama}}" readonly>
             </div>
 
             <div class="form-group">
                 <label for="nim">NIM:</label>
-                <input type="text" class="form-control" id="nim" name="nim" value="{{$mahasiswa->nim}}" required>
+                <input name="nim" type="text" class="form-control" id="nim" value="{{$mahasiswa->nim}}" readonly>
             </div>
 
             <div class="form-group">
                 <label for="jurusan">Jurusan:</label>
-                <input type="text" class="form-control" id="jurusan" name="jurusan" value="{{$mahasiswa->jurusan}}" required>
+                <input name="jurusan" type="text" class="form-control" id="jurusan" value="{{$mahasiswa->jurusan}}" readonly>
             </div>
 
             <div class="form-group">
                 <label for="alamat">Alamat:</label>
-                <input type="text" class="form-control" id="alamat" name="alamat"  value="{{$mahasiswa->alamat}}" required>
+                <input name="alamat" type="text" class="form-control" id="alamat"  value="{{$mahasiswa->alamat}}" readonly>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Update</button>
+            <!-- <div class="form-group">
+                <label for="no_identitas">Nomor Identitas:</label>
+                <input name="no_identitas" type="text" class="form-control" id="no_identitas" value="{{$mahasiswa->ktm->nomor_identitas}}"  readonly>
+            </div> -->
+
+            <button type="submit" class="btn btn-danger mt-3">Delete</button>
         </form>
     </div>
 
